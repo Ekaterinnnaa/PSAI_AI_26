@@ -75,7 +75,7 @@ for lr in [0.01, 0.1, 0.5]:
     test_p = Perceptron(input_size=2, learning_rate=lr)
     test_p.set_X(X_train)
     test_p.set_target(Y_targets)
-    history = test_p.train(epochs=5000)
+    history = test_p.train(epochs=500)
     plt.plot(history, label=f'LR = {lr}')
 
 plt.title("Dependence MSE on epoch")
@@ -107,7 +107,7 @@ def plot_current_state(user_point=None, user_class=None):
     plt.xlim([-1.5, 1.5])
     plt.ylim([-1.5, 1.5])
     plt.grid(True, linestyle='--', alpha=0.5)
-
+    plt.legend(loc='lower right')
     plt.title("Classification")
     plt.pause(0.1)
 
