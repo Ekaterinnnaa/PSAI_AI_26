@@ -17,8 +17,7 @@ idx_one = np.where(y_all == 1)[0]
 
 train_idx = np.concatenate([
     idx_zero,
-    np.random.choice(idx_one, size=499, replace=False)
-])
+    np.random.choice(idx_one, size=499, replace=False)])
 
 test_idx = np.array([i for i in range(len(X_all)) if i not in train_idx])
 
